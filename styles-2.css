@@ -1,0 +1,174 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(190, 43, 62);
+    color: black;
+    margin: 0;
+}
+h1 {
+    font-weight: 200;
+}
+header {
+    margin: 1rem 0;
+    padding-bottom: 1rem;
+}
+.header h1 {
+    font-family: 'Courgette', sans-serif;
+    font-weight: 400;
+  
+    text-align: center;
+    line-height: 1.4;
+}
+h1, h2, h3, h4 {
+    font-family: 'Courgette', sans-serif;
+    color: rgb(103, 27, 36);
+}
+main, footer {
+    padding: 0 1rem;
+}
+img, iframe, audio {
+    max-width: 100%;
+}
+.bakgrun {
+    background-color: rgb(255, 251, 239);
+    color: black;
+}
+.copy {
+    text-align: center;
+    color: rgb(80, 16, 23);
+}
+.footernav div {
+    display: block;
+    text-align: center;
+    padding: .5rem;
+}
+.footernav h4 {
+    color: rgb(80, 16, 23);
+}
+.footernav a {
+    display: block;
+    text-decoration: none;
+    color: rgb(255, 229, 233);
+    text-align: center;
+    padding: .2rem;
+    /*border: 1px solid rgb(255, 206, 206);
+    border-width: 0 0 1px 0;*/
+}
+.logo {
+    display: none;
+}
+.logo {
+    display: block;
+    position: fixed;
+    top: .1em;
+}
+
+
+/********* Grid mobile up ********/
+.col-31, .col-3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+}
+
+/* mobile landscape 600px */
+@media screen and (min-width:37.5rem) {
+    .col-3 {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    .logo {
+        display: block;
+        position: fixed;
+        top: .1em;
+    }
+}
+
+/* Spjaldtölvur */
+@media screen and (min-width:48rem) {
+    .col-31, .col-3 {
+        gap: 2rem;
+    }
+    .header h1 {
+        font-size: 3.3em;
+        padding: 0 2rem;
+        line-height: 1;
+    }
+    .col-3 {
+        grid-template-columns: 1fr 1fr;
+    }
+    .logo {
+        display: none;
+    }
+    .logo {
+        display: block;
+        position: fixed;
+        top: .1em;
+    }
+}
+
+/* Fartölvuskjáir + */
+@media screen and (min-width:60rem) {
+    .container {
+        max-width: 60rem;
+        margin: auto;
+    }
+    .header h1 {
+        font-size: 3rem;
+        padding: 0 2rem;
+    }
+    .col-31 {
+        grid-template-columns: 1fr 0.5fr;
+    }
+    .col-3 {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    main {
+        max-width: 60rem;
+        margin: 0 auto;
+        padding: 0 12rem;
+    }
+    .logo {
+        display: none;
+    }
+    .logo {
+        display: block;
+        position: fixed;
+        top: .1em;
+    }
+}
+
+/* 1280 px */
+@media screen and (min-width: 80rem) {
+    .container {
+        max-width: 80rem;
+        margin: auto;
+    }
+    .header h1 {
+        font-size: 3em;
+        padding: 0;
+    }
+    .col-3 {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    .col-31 {
+        grid-template-columns: 1fr 0.5fr;
+    }
+    main {
+        max-width: 80rem;
+        margin: 0 auto;
+        padding: 0 12rem;
+    }
+    .logo {
+        display: none;
+    }
+    .logo {
+        display: block;
+        position: fixed;
+        top: .1em;
+    }
+}
